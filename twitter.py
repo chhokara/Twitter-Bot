@@ -14,3 +14,6 @@ auth.set_access_token(AccessKey, AccessKey_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 user = api.me()
+
+for follower in tweepy.Cursor(api.friends).items():
+    print(follower.name)
