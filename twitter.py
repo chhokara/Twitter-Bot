@@ -11,5 +11,6 @@ AccessKey_secret = "i7hVgq7furWacz4VF9UF4VsFPap5FnoxmAtXvKBWcFs2h"
 
 auth.set_access_token(AccessKey, AccessKey_secret)
 
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-
+user = api.me()

@@ -85,3 +85,112 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1613242553031	Marionette	ERROR	[19] No reply from Marionette:Register
 1613242553394	Marionette	ERROR	[35] No reply from Marionette:Register
 1613242558416	Marionette	ERROR	[37] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613249746480	geckodriver	INFO	Listening on 127.0.0.1:51302
+1613249746508	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofileouTuZT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613249749347	Marionette	INFO	Listening on port 51311
+1613249749484	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613249749543	Marionette	ERROR	[19] No reply from Marionette:Register
+1613249749879	Marionette	ERROR	[35] No reply from Marionette:Register
+1613249754404	Marionette	ERROR	[37] No reply from Marionette:Register
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1613250321719	geckodriver	INFO	Listening on 127.0.0.1:51538
+1613250322725	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofileig8cIc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613250325569	Marionette	INFO	Listening on port 51549
+1613250325705	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613250325727	Marionette	ERROR	[19] No reply from Marionette:Register
+1613250326067	Marionette	ERROR	[35] No reply from Marionette:Register
+1613250381243	geckodriver	INFO	Listening on 127.0.0.1:51646
+1613250382253	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofileUiDa4V"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613250384996	Marionette	INFO	Listening on port 51658
+1613250385178	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613250385194	Marionette	ERROR	[19] No reply from Marionette:Register
+1613250385480	Marionette	ERROR	[35] No reply from Marionette:Register
+1613250397775	geckodriver	INFO	Listening on 127.0.0.1:51749
+1613250397782	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofileDBPGXx"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613250400572	Marionette	INFO	Listening on port 51758
+1613250400670	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613250400687	Marionette	ERROR	[16] No reply from Marionette:Register
+1613250400938	Marionette	ERROR	[35] No reply from Marionette:Register
+1613250406047	Marionette	ERROR	[37] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1613251031446	geckodriver	INFO	Listening on 127.0.0.1:51943
+1613251032457	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofileN8WSL7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613251034970	Marionette	INFO	Listening on port 51950
+1613251035000	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613251035019	Marionette	ERROR	[19] No reply from Marionette:Register
+1613251035225	Marionette	ERROR	[35] No reply from Marionette:Register
+1613251039335	Marionette	ERROR	[37] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
