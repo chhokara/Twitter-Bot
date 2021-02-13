@@ -6,6 +6,7 @@ import tweepy
 
 class TwitterBot:
     new_speak = [
+        'bigbrother',
         'bb',
         'bellyfeel',
         'blackwhite',
@@ -72,8 +73,6 @@ class TwitterBot:
         bot = self.bot
         tweets = bot.find_element_by_class_name(
             "css-1dbjc4n").text
-        if tweets not in TwitterBot.new_speak:
-            tweets.replace(tweets)
 
     def check(self, user):
         # leave this for now 
