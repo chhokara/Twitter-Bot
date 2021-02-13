@@ -1,9 +1,55 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import twitter
 
 
 class TwitterBot:
+    new_speak = [
+        'bb',
+        'bellyfeel',
+        'blackwhite',
+        'crimestop',
+        'crimethink',
+        'dayorder',
+        'dep',
+        'doubleplusgood',
+        'doubleplusungood',
+        'doublethink',
+        'duckspeak',
+        'facecrime',
+        'Ficdep',
+        'free',
+        'fullwise',
+        'goodthink',
+        'goodsex',
+        'goodwise',
+        'Ingsoc',
+        'joycamp',
+        'malquoted',
+        'Miniluv',
+        'Minipax',
+        'Minitrue',
+        'Miniplenty',
+        'Oldspeak',
+        'oldthink',
+        'ownlife',
+        'plusgood',
+        'plusungood',
+        'Pornosec',
+        'prolefeed',
+        'Recdep',
+        'rectify',
+        'ref',
+        'sec',
+        'sexcrime',
+        'speakwrite',
+        'Teledep',
+        'telescreen',
+        'thinkpol',
+        'unperson',
+        'upsub']  # list of newspeak words
+
     def __init__(self, email, password):
         self.email = email
         self.password = password
