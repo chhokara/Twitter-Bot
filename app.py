@@ -89,10 +89,15 @@ class TwitterBot:
 
         tweets = api.user_timeline(screen_name=user, count=200, include_rts = False, tweet_mode = 'extended')
 
-        for info in tweets[:3]:
-            if(info not in self.new_speak):
-                print("new speak violation: ", info.full_text)
+        for tweet in tweets[:3]:
+            tweet_words = tweet.full_text.split()
+            contains = any(i in tweet_words for i in self.new_speak)
+            if(not contains):
+                print("violation: ", tweet.full_text)
                 check = False
+            else:
+                print("new speak: ", tweet.full_text)
+
         return check
 
 team = TwitterBot('ScraperBot5', 'Arshdeep16')
