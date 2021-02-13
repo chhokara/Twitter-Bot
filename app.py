@@ -68,6 +68,14 @@ class TwitterBot:
         password.send_keys(Keys.RETURN)
         time.sleep(3)
 
+    def censor(self):
+        bot = self.bot
+        tweets = bot.find_element_by_class_name(
+            "css-1dbjc4n").text
+        if tweets not in TwitterBot.new_speak:
+            tweets.replace(tweets)
+
 
 team = TwitterBot('ScraperBot5', 'Arshdeep16')
 team.login()
+team.censor()
