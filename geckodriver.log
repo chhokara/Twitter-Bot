@@ -119,3 +119,13 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1613262904587	Marionette	ERROR	[35] No reply from Marionette:Register
 1613262908700	Marionette	ERROR	[37] No reply from Marionette:Register
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1613263138024	geckodriver	INFO	Listening on 127.0.0.1:56878
+1613263139023	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/ry/1_67fbkx0nxfddnf5vn497400000gn/T/rust_mozprofilewtENYR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613263141718	Marionette	INFO	Listening on port 56885
+1613263141821	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613263141852	Marionette	ERROR	[19] No reply from Marionette:Register
+1613263142165	Marionette	ERROR	[35] No reply from Marionette:Register
+1613263146751	Marionette	ERROR	[37] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
