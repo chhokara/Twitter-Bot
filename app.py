@@ -91,7 +91,7 @@ class TwitterBot:
 team = TwitterBot(email, password)
 team.login()
 check = team.check(email)
-# print(check)
+print(check)
 
 # only for cleaning
 # team.purge() 
