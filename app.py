@@ -2,8 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import tweepy
+import os
+from dotenv import load_dotenv
 
-from config import *
+# initial variables
+load_dotenv()
+consumer_key = os.getenv('KEY')
+consumer_secret = os.getenv('SECRET_KEY')
+access_token = os.getenv('ACCESSKEY')
+access_token_secret = os.getenv('ACCESSKEY_SECRET')
+email = os.getenv('EMAIL')
+password = os.getenv('PASSWORD')
 
 class TwitterBot:
     # list of newspeak words

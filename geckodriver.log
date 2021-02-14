@@ -1,0 +1,8 @@
+1613267536498	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.MdPXbX3bAyjT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613267538324	Marionette	INFO	Listening on port 35409
+1613267538419	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613267538430	Marionette	ERROR	[15] No reply from Marionette:Register
+1613267538724	Marionette	ERROR	[35] No reply from Marionette:Register
+1613267542856	Marionette	ERROR	[37] No reply from Marionette:Register
