@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 # end .env import
 
-
 key = os.getenv('KEY')
 secret_key = os.getenv('SECRET_KEY')
 
@@ -89,6 +88,15 @@ class TwitterBot:
         password.send_keys(Keys.RETURN)
         time.sleep(3)
 
+    def censor(self, tweet, tweet_words, tweet_id):
+        new_msg = ""
+        for word in tweet_words:
+            if word not in self.new_speak:
+                new_msg += " *censored* "
+            else:
+                new_msg += word
+        api.update_status(new_msg, tweet_id)
+
     def check(self, user):
         # leave this for now
         check = True
@@ -104,17 +112,14 @@ class TwitterBot:
                 check = False
             else:
                 print("new speak: ", tweet.full_text)
+            tweet_id = tweet.id
+            self.censor(tweet, tweet_words, tweet_id)
 
         return check
 
-    def censor(self, user, check):
-        if(check == False):
-            api.update_status("Big brother is watching")
 
-
-team = TwitterBot('ScraperBot5', 'bigbrother16')
+team = TwitterBot('MaybeABot5', 'mattiasmattias')
 team.login()
 # checks if following new speak
-check = team.check("ScraperBot5")
+check = team.check("MaybeABot5")
 print(check)
-team.censor("ScraperBot5", check)
