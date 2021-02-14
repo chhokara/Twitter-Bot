@@ -6,7 +6,7 @@ import tweepy
 
 class TwitterBot:
     new_speak = [
-        'bigbrother',
+        'brother',
         'bb',
         'bellyfeel',
         'blackwhite',
@@ -77,11 +77,11 @@ class TwitterBot:
     def check(self, user):
         # leave this for now 
         check = True
-        consumer_key = "8LfgceWJmQWwmjVMLEZCp4fvn"
-        consumer_secret = "wNbCmgCbpboKBwLjbdiZr7Ugyw9bhLNVz5hYUUJU7nRVEfl5Y9"
-        access_token = "872684552-W1M5j1gPwLNf7ZPYFwYu49HjjkohsZBttINuzhmE"
-        access_token_secret = "i7hVgq7furWacz4VF9UF4VsFPap5FnoxmAtXvKBWcFs2h"
-
+        consumer_key = "1dWixBjnCsHRpVXkNQKJChbrs"
+        consumer_secret = "TD8nsomVhCJM1cvJk7TbIia94V4y8KTksgWeLa4HqYfUjF7MxY"
+        access_token = "1360738471388741635-TfDNeRcIVEFahuaLxOvNEENajcJJPH"
+        access_token_secret = "vLAcZKM9vl8f5ForXgDemfWSbb2gfVv5n0isldfH3ifRM"
+        
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
         api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
@@ -96,12 +96,13 @@ class TwitterBot:
                 check = False
             else:
                 print("new speak: ", tweet.full_text)
-
+        if (not check):
+            api.update_status("big brother is watching!")
         return check
 
-team = TwitterBot('ScraperBot5', 'Arshdeep16')
+team = TwitterBot('MaybeABot5', 'mattiasmattias')
 team.login()
 team.censor()
 # checks if following new speak
-check = team.check("ScraperBot5")
+check = team.check("MaybeABot5")
 print(check)
