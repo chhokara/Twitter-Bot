@@ -58,6 +58,19 @@ class TwitterBot:
             api.update_status("big brother is watching!")
         return check
 
+    #Deletes all tweets from account
+    def deleteAllTweets(self):
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+        auth.set_access_token(access_token, access_token_secret)
+        api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+
+        for status in tweepy.Cursor(api.user_timeline).items():
+            try:
+                api.destroy_status(status.id)
+                print ("Deleted:", status.id)
+            except:
+                print ("Failed to delete:", status.id)
+
 team = TwitterBot(email, password)
 team.login()
 check = team.check(email)
