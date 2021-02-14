@@ -47,7 +47,8 @@ class TwitterBot:
                 new_msg += " *censored* "
             else:
                 new_msg += word
-        api.update_status(new_msg + "BIG BROTHER IS WATCHING", tweet_id)
+        api.destroy_status(tweet.id)
+        api.update_status(new_msg + "BIG BROTHER IS WATCHING")
 
     # establish tweepy connection and check if post contains new speak
     def check(self, user):
