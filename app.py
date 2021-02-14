@@ -1,80 +1,31 @@
+from dotenv import load_dotenv
+import os
 import tweepy
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-# .env file
-# must --> pip install python-dotenv
-import os
-from dotenv import load_dotenv
 
+# initial variables
 load_dotenv()
-# end .env import
-
-key = os.getenv('KEY')
-secret_key = os.getenv('SECRET_KEY')
-
-AccessKey = os.getenv('ACCESSKEY')
-AccessKey_secret = os.getenv('ACCESSKEY_SECRET')
-
-auth = tweepy.OAuthHandler(key, secret_key)
-auth.set_access_token(AccessKey, AccessKey_secret)
-api = tweepy.API(auth, wait_on_rate_limit=True,
-                 wait_on_rate_limit_notify=True)
+consumer_key = os.getenv('KEY')
+consumer_secret = os.getenv('SECRET_KEY')
+access_token = os.getenv('ACCESSKEY')
+access_token_secret = os.getenv('ACCESSKEY_SECRET')
+email = os.getenv('EMAIL')
+password = os.getenv('PASSWORD')
 
 
 class TwitterBot:
-
-    new_speak = [
-        'bigbrother',
-        'bb',
-        'bellyfeel',
-        'blackwhite',
-        'crimestop',
-        'crimethink',
-        'dayorder',
-        'dep',
-        'doubleplusgood',
-        'doubleplusungood',
-        'doublethink',
-        'duckspeak',
-        'facecrime',
-        'Ficdep',
-        'free',
-        'fullwise',
-        'goodthink',
-        'goodsex',
-        'goodwise',
-        'Ingsoc',
-        'joycamp',
-        'malquoted',
-        'Miniluv',
-        'Minipax',
-        'Minitrue',
-        'Miniplenty',
-        'Oldspeak',
-        'oldthink',
-        'ownlife',
-        'plusgood',
-        'plusungood',
-        'Pornosec',
-        'prolefeed',
-        'Recdep',
-        'rectify',
-        'ref',
-        'sec',
-        'sexcrime',
-        'speakwrite',
-        'Teledep',
-        'telescreen',
-        'thinkpol',
-        'unperson',
-        'upsub']  # list of newspeak words
+    # list of newspeak words
+    new_speak = ['brother', 'bb', 'bellyfeel', 'blackwhite', 'crimestop', 'crimethink', 'dayorder', 'dep', 'doubleplusgood', 'doubleplusungood', 'doublethink', 'duckspeak', 'facecrime', 'Ficdep', 'free', 'fullwise', 'goodthink', 'goodsex', 'goodwise', 'Ingsoc', 'joycamp',
+                 'malquoted', 'Miniluv', 'Minipax', 'Minitrue', 'Miniplenty', 'Oldspeak', 'oldthink', 'ownlife', 'plusgood', 'plusungood', 'Pornosec', 'prolefeed', 'Recdep', 'rectify', 'ref', 'sec', 'sexcrime', 'speakwrite', 'Teledep', 'telescreen', 'thinkpol', 'unperson', 'upsub']
 
     def __init__(self, email, password):
         self.email = email
         self.password = password
         self.bot = webdriver.Firefox()
 
+    # login to twitter using selenium
     def login(self):
         bot = self.bot
         bot.get('https://twitter.com/?lang=en')
@@ -88,7 +39,8 @@ class TwitterBot:
         password.send_keys(Keys.RETURN)
         time.sleep(3)
 
-    def censor(self, tweet, tweet_words, tweet_id):
+    # determines which posts do not contain new speak and sensors them
+    def censor(self, tweet, tweet_words, tweet_id, api):
         new_msg = ""
         for word in tweet_words:
             if word not in self.new_speak:
@@ -97,9 +49,14 @@ class TwitterBot:
                 new_msg += word
         api.update_status(new_msg, tweet_id)
 
+    # establish tweepy connection and check if post contains new speak
     def check(self, user):
-        # leave this for now
         check = True
+
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+        auth.set_access_token(access_token, access_token_secret)
+        api = tweepy.API(auth, wait_on_rate_limit=True,
+                         wait_on_rate_limit_notify=True)
 
         tweets = api.user_timeline(
             screen_name=user, count=200, include_rts=False, tweet_mode='extended')
@@ -110,16 +67,32 @@ class TwitterBot:
             if(not contains):
                 print("violation: ", tweet.full_text)
                 check = False
+
             else:
                 print("new speak: ", tweet.full_text)
+
             tweet_id = tweet.id
-            self.censor(tweet, tweet_words, tweet_id)
+            self.censor(tweet, tweet_words, tweet_id, api)
 
         return check
 
+    # Deletes all tweets from account
+    def deleteAllTweets(self):
+        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+        auth.set_access_token(access_token, access_token_secret)
+        api = tweepy.API(auth, wait_on_rate_limit=True,
+                         wait_on_rate_limit_notify=True)
 
-team = TwitterBot('MaybeABot5', 'mattiasmattias')
+        for status in tweepy.Cursor(api.user_timeline).items():
+            try:
+                api.destroy_status(status.id)
+                print("Deleted:", status.id)
+            except:
+                print("Failed to delete:", status.id)
+
+
+team = TwitterBot(email, password)
 team.login()
-# checks if following new speak
-check = team.check("MaybeABot5")
+check = team.check(email)
 print(check)
+# team.deleteAllTweets()
