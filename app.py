@@ -88,7 +88,7 @@ class TwitterBot:
 
         tweets = api.user_timeline(screen_name=user, count=200, include_rts = False, tweet_mode = 'extended')
 
-        for tweet in tweets[:3]:
+        for tweet in tweets[:]:
             tweet_words = tweet.full_text.split()
             contains = any(i in tweet_words for i in self.new_speak)
             if(not contains):
