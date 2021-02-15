@@ -1,7 +1,7 @@
 
 # About: 
-* searches and post "big brother is watching" 
-* if the tweet does not contain new speak vocabularies
+* Our bot searches the user's tweets and deletes any ones not in NewSpeak (1984 by George Orwell)
+* It will re-post a new censored version of the original tweet followed by "BIG BROTHER IS WATCHING"
 
 ## Here's an example!
 
@@ -20,5 +20,5 @@
   * unzip geckodriver.tar.gz
   * mv geckodriver /usr/local/bin
 
-#### run:
+#### Run:
   * python3 app.py
