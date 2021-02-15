@@ -23,6 +23,6 @@
   ```
 
 #### Run:
-  ```python
+  ```
   * python3 app.py
   ```
