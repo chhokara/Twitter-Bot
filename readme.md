@@ -14,11 +14,15 @@
 ![tweet after censor](https://user-images.githubusercontent.com/57025422/107981788-a251e700-6f77-11eb-8cdf-8f7a6989888b.PNG)
 
 #### Install:
+```
   * pip install python-dotenv
   * pip install tweepy
   * pip install selenium
   * unzip geckodriver.tar.gz
   * mv geckodriver /usr/local/bin
+  ```
 
 #### Run:
+  ```
   * python3 app.py
+  ```
