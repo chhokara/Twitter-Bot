@@ -15,11 +15,11 @@
 
 #### Install:
 ```
-   pip install python-dotenv
-   pip install tweepy
-   pip install selenium
-   unzip geckodriver.tar.gz
-   mv geckodriver /usr/local/bin
+  pip install python-dotenv
+  pip install tweepy
+  pip install selenium
+  unzip geckodriver.tar.gz
+  mv geckodriver /usr/local/bin
   ```
 
 #### Run:
