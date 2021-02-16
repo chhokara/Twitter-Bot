@@ -5,11 +5,11 @@
 
 ## Here's an example!
 
-## Tweet before censor:
+### Tweet before censor:
 
 ![tweet before censor](https://user-images.githubusercontent.com/57025422/107981797-a5e56e00-6f77-11eb-9ebf-ff6cc04f0293.PNG)
 
-## Tweet after censor:
+### Tweet after censor:
 
 ![tweet after censor](https://user-images.githubusercontent.com/57025422/107981788-a251e700-6f77-11eb-8cdf-8f7a6989888b.PNG)
 
